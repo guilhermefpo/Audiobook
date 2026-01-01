@@ -16,13 +16,32 @@ The React Compiler is not enabled on this template because of its impact on dev 
 If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
 
 
-## Iniciar Projeto
+# 📘 Audiobook
 
-1- cd nome-do-projeto
-2- npm install (Se não instalou ainda)
-3- npm run dev ou npm start (para rodar o projeto)
+## 🚀 Como iniciar o projeto
 
-# Fechar o Projeto 
+1. Acesse a pasta do projeto:
+   cd nome-do-projeto
 
-- ctrl + c
+2. Instale as dependências (caso ainda não tenha instalado):
+   npm install
 
+3. Inicie o projeto:
+   npm run dev
+   ou
+   npm start
+
+## ⏹️ Como encerrar o projeto
+
+Para parar a execução no terminal:
+Ctrl + C
+
+## 📖 Sobre o projeto
+
+- Projeto criado com foco nos primeiros aprendizados em React.js.
+- Aplicação simples para fins educacionais.
+- Status: 🚧 Em andamento.
+
+## 🤝 Apoio
+
+- Hashtag Programação
