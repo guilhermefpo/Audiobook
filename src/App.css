@@ -139,19 +139,32 @@
 
 .caixa-botoes {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 60%;
-  max-width: 400px;
-  & > button {
-    background-color: transparent;
-    border: none;
-    font-size: 1.5rem;
-  }
-  & :not(:first-child):not(:last-child) {
-    font-size: 2rem;
-  }
+  justify-content: space-around;   /* centraliza o grupo */
+  align-items: center;       /* centraliza verticalmente */
+  gap: 1.2rem;               /* espaçamento igual entre botões */
+  width: 100%;
 }
+
+.caixa-botoes > button {
+  background-color: transparent;
+  border: none;
+  display: flex;             /* 🔑 */
+  align-items: center;       /* 🔑 */
+  justify-content: center;   /* 🔑 */
+  padding: 0;
+  cursor: pointer;
+}
+
+.caixa-botoes i {
+  font-size: 1.6rem;
+  line-height: 1;            /* 🔑 evita “torto” */
+}
+
+.caixa-botoes > :not(:first-child):not(:last-child) i {
+  font-size: 2.2rem;         /* play/pause maior */
+}
+
+
 
 .play-pause {
   background: yellow;
