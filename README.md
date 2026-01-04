@@ -40,7 +40,7 @@ Ctrl + C
 
 - Projeto criado com foco nos primeiros aprendizados em React.js.
 - Aplicação simples para fins educacionais.
-- Status: 🚧 Em andamento.
+- Status: andamento.
 
 ## 🤝 Apoio
 
