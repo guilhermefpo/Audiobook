@@ -1,7 +1,6 @@
 import { useState, useRef, useEffect } from 'react';
 import './App.css';
 import 'bootstrap-icons/font/bootstrap-icons.css';
-
 import brasCubasImg from './assets/bras_cubas.jpeg';
 import Capa from './Capa';
 import SeletorCapitulos from './SeletorCapitulos';
@@ -15,8 +14,9 @@ function App() {
   const [faixaAtual, definirFaixaAtual] = useState(0);
   const [tempoTotalFaixa, definirTempoTotalFaixa] = useState(0);
   const [tempoAtualFaixa, definirTempoAtualFaixa] = useState(0);
-
   const tagAudio = useRef(null);
+  const barraProgresso = useRef(null);
+
 
   useEffect(() => {
     if (taTocando) {
@@ -69,6 +69,12 @@ function App() {
     tagAudio.current.currentTime -= 15;
   }
 
+  const avancarPara = (evento) => {
+    const largura = barraProgresso.current.clientWidth; // Largura em pixels.
+    const novoTempo = (evento.nativeEvent.offsetX / largura) * tempoTotalFaixa;
+    tagAudio.current.currentTime = novoTempo;
+  }
+
   return (
     <>
       <Capa
@@ -88,6 +94,8 @@ function App() {
       <ContainerProgresso
         tempoTotalFaixa={tempoTotalFaixa}
         tempoAtualFaixa={tempoAtualFaixa}
+        referencia={barraProgresso}
+        avancarPara={avancarPara}
       />
 
       <BotoesControle
